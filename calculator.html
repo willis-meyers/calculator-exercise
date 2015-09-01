@@ -4,6 +4,48 @@
     <link rel="stylesheet" type="text/css" href="calcstyle.css">
   </head>
   <body>
+    <script>
+    var calculator = document.createElement("div");
+    calculator.id = "calculator";
+    document.body.appendChild(calculator);
+    var header = document.createElement("h3");
+    header.innerText = "Calculator";
+    calculator.appendChild(header);
+    var num = 1;
+for (i=1; i<=12; i++) {
+    var row1 = document.createElement("div");
+        if (i == 4) {
+            row1.innerText = "+";
+        }
+            else if (i == 8) {
+                row1.innerText = "-";
+            }
+               else if (i == 12) {
+                row1.innerText = "="; 
+            }
+                else {
+                    row1.innerText = num
+                    num++
+                }
+                    calculator.appendChild(row1);
+}
+    var solution_bar = document.createElement("p");
+    solution_bar.id = "solution_bar";
+    calculator.appendChild(solution_bar);
+
+
+    function giveMeYourValue(e) {
+        console.log(e.target.value);
+    }
+
+    var button = document.getElementsByClassName('btn')[0];
+    button.addEventListener('click', click);
+    // button.addEventListener('click', giveMeYourValue);
+
+    
+    </script>
+
+<button type="button" class="btn">Click Me!</button>
+
   </body>
 </html>
-
